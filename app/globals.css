@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{color-scheme:dark}
+html, body { height: 100%; }
+body { @apply bg-black text-white antialiased; }
+
+/********************
+  Scrollbar minimal
+********************/
+*::-webkit-scrollbar { height: 10px; width: 10px; }
+*::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 9999px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/********************
+  Utilities
+********************/
+.container-px { @apply px-4 sm:px-6 lg:px-10; }
+.row-mask {
+  mask-image: linear-gradient(to right, transparent, black 24px, black calc(100% - 24px), transparent);
+}
+.card-gradient {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+}
+.badge { @apply inline-flex items-center rounded-full bg-white/10 px-2 py-0.5 text-xs font-medium text-white; }
